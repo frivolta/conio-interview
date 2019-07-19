@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
 
+//@ToDO: Convert to stateless method, class is not needed 
 class Price extends Component {
   render() {
     const { isLoading } = this.props.isLoading;
@@ -17,7 +18,10 @@ class Price extends Component {
 }
 
 Price.propTypes = {
-  children: PropTypes.string.isRequired
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array
+  ]),
 }
 
 const mapStateToProps = state => {

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 
+
+//@ToDO: Convert to stateless method, class is not needed 
 class Message extends Component {
   render() {
     return (

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
 import { getPrice } from '../redux/actions/pricingActions';
 import Message from '../components/message/Message';
@@ -32,6 +33,13 @@ class PricingPage extends Component {
     )
   }
 }
+
+PricingPage.propTypes = {
+  pricing: PropTypes.object.isRequired,
+  isLoading: PropTypes.object.isRequired,
+  error: PropTypes.object.isRequired
+}
+
 
 const mapStateToProps = state => {
   return {
